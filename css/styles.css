@@ -1,0 +1,74 @@
+body{
+    width:600px;
+}
+
+.rediact-btn{
+    margin-top:35px;
+}
+
+#wrapper{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#wrapper .logo{
+    margin-bottom: 25px;
+}
+#wrapper .logo img{
+    width: 250px;
+    margin: 0 auto;
+}
+
+
+#wrapper .title{
+    font-size:20px;
+}
+
+#wrapper .content .title-leave{
+    margin-top:25px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #262637;
+}
+
+
+#wrapper .content .title-leave span{
+    float: left;
+}
+
+#wrapper .content .title-leave::before {
+    content: '';
+    width: 8px;
+    height: 20px;
+    background-color: #E04403;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#wrapper #table-main{
+    margin-top:20px;
+}
+
+#wrapper #table-main > thead > tr > th{
+   font-size: 12px;
+}
+
+.alert-custom{
+    padding: 5px !important;
+    margin-bottom: 0 !important;
+}
+
+.ajs-message{
+    color: #fff;
+}
+
+.input-content{
+    margin-top: 20px;
+}
+
+#btn-delete-all{
+    float: right;
+}
