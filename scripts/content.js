@@ -1,3 +1,6 @@
+
+
+
 chrome.runtime.onMessage.addListener(function(request,sender,sendResponse) {
     if(request.todo =="chamcong"){
         let data = request.data.arrLeave;
@@ -20,4 +23,8 @@ chrome.runtime.onMessage.addListener(function(request,sender,sendResponse) {
         })
         chrome.runtime.sendMessage({todo: "success",data:"Chấm công thành công!"});
     }
+})
+$(function(){
+    console.log($(".ItemInput.InputR input[data-role='datepicker']").val());
+    chrome.runtime.sendMessage({todo: "date",data:$(".ItemInput.InputR input[data-role='datepicker']").val()});
 })
