@@ -63,9 +63,15 @@ var EofficeController = {
             let index =0;
             if(rangerDate.length>0){
                 rangerDate.forEach(itemDate=>{
+
+                    let day ="00"+ itemDate.getDate();
+                    day = day.slice(day.length-2, day.length)
+                    let month = "00"+ (itemDate.getMonth()+1);
+                    month = month.slice(month.length-2, month.length)
+
                     let model = {
                         id: index++,
-                        date: itemDate.getDate()+"/"+(itemDate.getMonth()+1)+"/"+itemDate.getFullYear(),
+                        date:day+"/"+month+"/"+itemDate.getFullYear(),
                         description: "Xin nghỉ phép",
                         hour: 0,
                     }
