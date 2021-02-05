@@ -25,6 +25,5 @@ chrome.runtime.onMessage.addListener(function(request,sender,sendResponse) {
     }
 })
 $(function(){
-    console.log($(".ItemInput.InputR input[data-role='datepicker']").val());
     chrome.runtime.sendMessage({todo: "date",data:$(".ItemInput.InputR input[data-role='datepicker']").val()});
 })

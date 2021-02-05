@@ -23,7 +23,6 @@ var EofficeController = {
         });
       }
       else if(request.todo == "date"){
-          console.log(request.data)
       }
     });
 
@@ -49,7 +48,6 @@ var EofficeController = {
 
     $.ajax(settings).done(function(response) {
       let dsDonXinPhep = response.d.results;
-      console.log(dsDonXinPhep);
       dsDonXinPhep.forEach((item) => {
         let dateObjStart = self.Methods.getObjDate(item.TuNgay);
         let dateObjEnd = self.Methods.getObjDate(item.DenNgay);
@@ -58,7 +56,6 @@ var EofficeController = {
         var end = new Date(dateObjEnd.month+"/"+dateObjEnd.day+"/"+dateObjEnd.year);
         if (dateObjStart.month == dateObjEnd.month &&dateObjStart.year == dateObjEnd.year) 
         {
-            console.log("TH1: Đẹp");
             let rangerDate = self.Methods.getRangerDaysArray(start,end);
             let index =0;
             if(rangerDate.length>0){
@@ -80,7 +77,6 @@ var EofficeController = {
             }
         }
         else{
-            console.log("TH1: Khách tháng khác năm");
             let rangerDate = self.Methods.getRangerDaysArray(start,end);
             let index =0;
             if(rangerDate.length>0){

@@ -14,7 +14,6 @@ var EofficeController = {
         })
 
         chrome.browserAction.onClicked.addListener(function(tab) {
-            console.log(new Date());
             //chrome.tabs.create({'url': chrome.extension.getURL('index.html'), 'selected': true});
         });
         // chrome.tabs.create({'url': chrome.extension.getURL('index.html')}, function(tab) {
